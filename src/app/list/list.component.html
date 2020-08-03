@@ -1,0 +1,16 @@
+<div class="col-md-4" style="margin-left: -80px;">
+     <div class="card-container manual-flip">
+        <div class="card">
+            <div class="fontListItem">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-4 d-flex justify-content-center">
+                       <h1>List Of CVs</h1>
+                    </li>
+                    <li id="item" class="list-group-item px-4 d-flex" *ngFor="let id of ids;">
+                        <app-item [itemId]="id"></app-item>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+</div>

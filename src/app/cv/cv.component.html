@@ -1,0 +1,14 @@
+<div class="container" *ngIf="outlet.isActivated == false">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <app-list></app-list>
+            
+            <app-detail [person]="chosenItem"></app-detail>
+
+            <app-hired-cv [person]="chosenItem"></app-hired-cv>
+        </div> <!-- end col-sm-10 -->
+    </div> <!-- end row -->
+    <div class="space-200"></div>
+</div>
+
+<router-outlet #outlet="outlet"></router-outlet>

@@ -1,0 +1,7 @@
+label {
+    float: left;
+}
+
+input:read-only {
+  background-color: #ccc;
+}

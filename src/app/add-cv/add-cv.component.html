@@ -1,0 +1,153 @@
+<div class="main-content-container container-fluid px-4" style="margin-top: -180px">
+  <!-- Page Header -->
+  <!-- <div class="page-header row no-gutters py-4">
+    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+      <span class="text-uppercase page-subtitle">Overview</span>
+      <h3 class="page-title">User Profile</h3>
+    </div>
+  </div> -->
+  <!-- End Page Header -->
+  <!-- Default Light Table -->
+  <div class="row" style="margin-left: 220px; margin-top: 80px;">
+    <div class="col-lg-8">
+      <div class="card card-small mb-4">
+        <div class="card-header border-bottom">
+          <h6 class="m-0" style="color: red">Add a new CV</h6>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item p-3">
+            <div class="row">
+              <div class="col">
+                <form #cvForm="ngForm">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="feName">First Name</label>
+                      <input 
+                        #name="ngModel" 
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        id="feName"
+                        placeholder="First Name"
+                        minlength="2"
+                        maxlength="20"
+                        ngModel
+                        required>
+                      <div
+                        class="alert alert-danger"
+                        *ngIf="name.invalid && name.touched"
+                      >
+                        Invalid First Name
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="fefirstName">Last Name</label>
+                      <input 
+                        #firstname="ngModel" 
+                        type="text"
+                        class="form-control"
+                        name="firstname"
+                        id="fefirstName"
+                        placeholder="Last Name"
+                        minlength="2"
+                        maxlength="20"
+                        ngModel
+                        required>
+                      <div
+                        class="alert alert-danger"
+                        *ngIf="firstname.invalid && firstname.touched"
+                      >
+                        Invalid Last Name
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="feEmailAddress">Email</label>
+                      <input 
+                        #email="ngModel" 
+                        type="text"
+                        class="form-control"
+                        name="email"
+                        id="feEmailAddress"
+                        placeholder="Email"
+                        ngModel
+                        email
+                        required>
+                      <div
+                        class="alert alert-danger"
+                        *ngIf="email.invalid && email.touched"
+                      >
+                        Invalid Email, example : foulen@domain
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="feAge">Age</label>
+                      <input 
+                        #age="ngModel" 
+                        type="number"
+                        class="form-control"
+                        name="age"
+                        id="feAge"
+                        placeholder="Age"
+                        min="10"
+                        max="70"
+                        ngModel
+                        required>
+                      <div
+                        class="alert alert-danger"
+                        *ngIf="age.invalid && age.touched"
+                      >
+                        Invalid Age, 10 < age < 70
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="feCIN">Identity Card Number</label>
+                    <input 
+                      #cin="ngModel" 
+                      type="number"
+                      class="form-control"
+                      name="cin"
+                      id="feCIN"
+                      placeholder="12345678"
+                      min="8"
+                      max="8"
+                      ngModel
+                      required>
+                    <div
+                      class="alert alert-danger"
+                      *ngIf="age.invalid && age.touched"
+                    >
+                      Invalid CIN, its length should be 8 numbers
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="feJob">Job</label>
+                    <input 
+                      #job="ngModel" 
+                      type="text"
+                      class="form-control"
+                      name="job"
+                      id="feJob"
+                      placeholder="Job"
+                      ngModel
+                      required>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-success btn-lg"
+                    [disabled]="cvForm.invalid"
+                    (click)="addCV(cvForm.value)">
+                      Add CV
+                  </button>
+                </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Default Light Table -->
+</div>

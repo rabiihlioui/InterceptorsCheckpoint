@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Main Sidebar -->
+    <aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
+      <div class="nav-wrapper">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link " *ngIf="!authenticationService.isUserLoggedIn()" routerLink="/login">
+              <i class="material-icons" style="color: black">vertical_split</i>
+              <span style="color: black">Login</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " *ngIf="authenticationService.isUserLoggedIn()" routerLink="/welcome">
+              <i class="material-icons" style="color: black">vertical_split</i>
+              <span style="color: black">Welcome</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " *ngIf="authenticationService.isUserLoggedIn()" routerLink="/cv">
+              <i class="material-icons" style="color: red">person</i>
+              <span style="color: red">List of CVs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " *ngIf="authenticationService.isUserLoggedIn()" routerLink="/addCv">
+              <i class="material-icons" style="color: blue">edit</i>
+              <span style="color: blue">Add CV</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " *ngIf="authenticationService.isUserLoggedIn()" routerLink="/logout">
+              <i class="material-icons" style="color: black">vertical_split</i>
+              <span style="color: black">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- End Main Sidebar -->
+    <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
+
+      <div class="main-content-container container-fluid px-4">
+        <div class="page-header row no-gutters py-4">
+          <div class="col-12 text-center">
+
+
+            <router-outlet></router-outlet>
+
+
+          </div>
+        </div>
+        
+      </div>
+    </main>
+  </div>
+</div>

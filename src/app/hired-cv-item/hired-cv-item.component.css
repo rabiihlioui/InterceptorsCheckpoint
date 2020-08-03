@@ -1,0 +1,14 @@
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 70px;
+  height: 72px;
+  float: left;
+}
+
+p {
+  line-height: 65px;
+  margin-left: 30px;
+  display: inline;
+}

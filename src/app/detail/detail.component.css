@@ -1,0 +1,17 @@
+button {
+    border-radius: 12px;
+}
+
+.front, .back {
+    height: 500px;
+}
+
+.footer {
+    margin: 100px 0 0;
+}
+
+#hireCv {
+    padding-left: 38px;
+    padding-right: 38px;
+    margin-bottom: 15px;
+}

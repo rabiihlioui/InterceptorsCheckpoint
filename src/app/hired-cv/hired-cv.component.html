@@ -1,0 +1,23 @@
+<div class="col-md-5" [hidden]="showHiringCVs">
+  <div class="card-container manual-flip">
+     <div class="card">
+         <div class="fontListItem">
+             <ul class="list-group list-group-flush">
+                 <li class="list-group-item px-4 d-flex justify-content-center">
+                    <h1 style="float: left; margin-right: 15px;">Hired CV</h1>
+                    <div class="text-center" style="float: right; margin-top: 15px;">
+                        <button type="button" class="btn btn-outline-danger btn-lg" (click)="unhireAllCvs()">Unhire All CVs</button>
+                    </div>
+                 </li>
+                 <li class="list-group-item px-4 d-flex" *ngFor="let cv of cvs;">
+                    <app-hired-cv-item [person]="cv" class="list-group-item px-4 d-flex"></app-hired-cv-item>
+                    <div class="text-center" style="margin: 25px 0 0 15px">
+                        <input #trash id="{{cv.id}}" type="image" src="./assets/images/trash_icon.ico" 
+                              (click)="unhireCv(trash.id)" width="30" height="30">
+                    </div>
+                 </li>
+             </ul>
+         </div>
+     </div>
+  </div> 
+</div>

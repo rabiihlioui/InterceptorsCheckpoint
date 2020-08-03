@@ -1,0 +1,54 @@
+<div class="col-md-4 col-sm-6" [hidden]="showDetails">
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                <div class="cover">
+                    <img src="{{pers.cover}}"/>
+                </div>
+                <div class="user">
+                    <img class="img-circle" src="{{pers.picture}}"/>
+                </div>
+                <div class="content">
+                    <div class="main">
+                        <h3 class="name">{{pers.name}} {{pers.firstname}}</h3>
+                        <p class="profession">{{pers.job}}</p>
+
+                        <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                    </div>
+                    <div class="footer">
+                        <div class="rating">
+                            <i class="fa fa-mail-forward"></i> Auto Rotation
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="header">
+                    <h5 class="motto">
+                        <strong class="text-muted d-block mb-2">Age</strong>
+                        <span style="text-transform: capitalize; color: red;">{{pers.age}}</span>
+                    </h5>
+                </div>
+                <div class="content">
+                    <div class="main">
+                        <h4 class="text-center">Carte D'identité</h4>
+                        <p class="text-center">{{pers.cin}}</p>
+
+                        <h4 class="text-center">Email</h4>
+                        <p class="text-center">{{pers.email}}</p>
+
+                        <!-- <div class="stats-container">
+                        </div> -->
+
+                    </div>
+                    <div class="text-center">
+                        <button id="hireCv" type="button" class="btn btn-success btn-rounded btn-lg" (click)="hireCv()">Hire CV</button>
+                    </div>
+                    <div class="text-center">
+                        <a type="button" class="btn btn-outline-warning btn-lg" routerLink="{{pers.id}}/cvDetails">CV Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
